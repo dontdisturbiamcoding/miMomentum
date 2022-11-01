@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffef;
+}
+
+.container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(img/5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    max-height: 80px;
+}
+
+nav .nav {
+    list-style: none;
+    display: flex;
+    gap: 0.9rem;
+    background-color: #000;
+    padding: 0.2rem 0;
+}
+
+.item a{
+    text-decoration: none;
+    margin: 0 0.8rem;
+    font-size: 0.65rem;
+    color: #ffffef;
+    cursor: pointer;
+    
+}
+.item a:hover {
+    color: #d6d6d4;
+}
+
+.main {
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.main h1 {
+    font-size: 8rem;
+}
+.main p {
+    font-size: 3rem;
+}
+
+footer {
+    width: 50%;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
