@@ -29,10 +29,11 @@ function horaActual () {
         document.getElementById("hora").innerHTML = `${hours}:0${minutes}:0${seconds}`;
     } else if (seconds < 10) {
         document.getElementById("hora").innerHTML = `${hours}:${minutes}:0${seconds}`;
+    } else if (minutes < 10) {
+        document.getElementById("hora").innerHTML = `${hours}:0${minutes}:${seconds}`;
     } else {
         document.getElementById("hora").innerHTML = `${hours}:${minutes}:${seconds}`;
     }
-
 }
 
 cambioFondo(numAleatorio);
