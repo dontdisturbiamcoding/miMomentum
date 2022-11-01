@@ -30,7 +30,7 @@ function horaActual () {
     } else if (seconds < 10) {
         document.getElementById("hora").innerHTML = `${hours}:${minutes}:0${seconds}`;
     } else {
-        document.getElementById("hora").innerHTML = `${hours}:0${minutes}:${seconds}`;
+        document.getElementById("hora").innerHTML = `${hours}:${minutes}:${seconds}`;
     }
 
 }
