@@ -26,14 +26,15 @@ function horaActual () {
     let minutes = getTime.getMinutes();
     let seconds = getTime.getSeconds();
     if (seconds < 10 && minutes < 10) {
-        document.getElementById("hora").innerHTML = `${hours}:0${minutes}:0${seconds}`;
+        seconds = "0"+seconds;
+        minutes = "0"+minutes;
     } else if (seconds < 10) {
-        document.getElementById("hora").innerHTML = `${hours}:${minutes}:0${seconds}`;
-    } else if (minutes < 10) {
-        document.getElementById("hora").innerHTML = `${hours}:0${minutes}:${seconds}`;
-    } else {
-        document.getElementById("hora").innerHTML = `${hours}:${minutes}:${seconds}`;
-    }
+        seconds = "0" + seconds;
+    } else  if (minutes < 10) {
+        minutes = "0" + minutes;
+    } 
+    document.getElementById("hora").innerHTML = `${hours}:${minutes}:${seconds}`;
+
 }
 
 cambioFondo(numAleatorio);
