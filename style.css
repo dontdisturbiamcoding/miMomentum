@@ -27,26 +27,35 @@ body {
 nav {
     width: 100%;
     max-height: 80px;
+    background-color: rgba(0, 0, 0, 0.516);
 }
 
 nav .nav {
     list-style: none;
     display: flex;
-    gap: 0.9rem;
-    background-color: #000;
+    justify-content: space-around;
+    gap: 0.2rem;
     padding: 0.2rem 0;
+    flex-wrap: wrap;
 }
 
 .item a{
     text-decoration: none;
-    margin: 0 0.8rem;
+    margin: 0 0.9rem;
     font-size: 0.65rem;
     color: #ffffef;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 .item a:hover {
     color: #d6d6d4;
+}
+
+.item img {
+    position: relative;
+    top: 0.15rem;
+    margin-right: 0.2rem;
+    max-width: 0.8rem;
+    max-height: 0.8rem;
 }
 
 .main {
