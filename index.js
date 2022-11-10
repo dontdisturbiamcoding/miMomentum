@@ -45,13 +45,14 @@ function saludo (hours) {
         document.querySelector(".saludo").textContent = "Buenos días " + userName;
     } else if (hours < 21) {
         document.querySelector(".saludo").textContent = "Buenas tardes " + userName;
-    } else  if (hours < 0) {
+    } else  if (hours <= 21 || hours > 23 ) {
         document.querySelector(".saludo").textContent = "Buenas noches " + userName;
     } else {
         document.querySelector(".saludo").textContent = "Hora de dormir " + userName;
     }
 }
 
+// Se podría refactorizar lo de arriba haciendo una función que retorne el string del saludo y lo añada al document etc.
 
 cambioFondo(numAleatorio);
 horaActual();
