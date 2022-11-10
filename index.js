@@ -8,17 +8,12 @@ let numAleatorio = Math.floor(Math.random()*3)+1;
 // Cambiar el fondo según el numero Aleatorio
 function cambioFondo (numAleatorio) {
     let background;
-    switch (numAleatorio) {
-        case (1):
-            background = "img/1.png";
-        break;
-        case (2):
-            background = "img/2.jpg";
-        break;
-        case (3):
-            background = "img/3.jpg"
-        break;
+    if (numAleatorio === 1) {
+        background = "img/" + numAleatorio + ".png";
+    } else {
+        background = "img/" + numAleatorio + ".jpg";
     }
+
     console.log(background);
     document.querySelector(".container").style.backgroundImage = `url(${background})` ;
 }
@@ -28,27 +23,32 @@ function horaActual () {
     let getTime = new Date();
     let hours = getTime.getHours();
     let minutes = getTime.getMinutes();
-    let seconds = getTime.getSeconds();
-    if (seconds < 10 && minutes < 10) {
-        seconds = "0"+seconds;
+    // let seconds = getTime.getSeconds();
+     if (/*seconds < 10 &&*/ minutes < 10) {
+        //seconds = "0"+seconds;
         minutes = "0"+minutes;
-    } else if (seconds < 10) {
-        seconds = "0" + seconds;
+    // } else if (seconds < 10) {
+    //     seconds = "0" + seconds;
     } else  if (minutes < 10) {
         minutes = "0" + minutes;
     } 
-    document.getElementById("hora").innerHTML = `${hours}:${minutes}:${seconds}`;
+    document.getElementById("hora").innerHTML = `${hours}:${minutes}`; //Borrado :${segundos}
     saludo(hours); // Llamamos a la función que genera el saludo en función de hours
 }
 
 // Cambiar el saludo en función de la hora
 function saludo (hours) {
-    if (hours < 12) {
+    
+    if (hours > 5 && hours < 7) {
+        document.querySelector(".saludo").textContent = "¿Que haces despierto? " + userName;
+    } else if (hours < 12) {
         document.querySelector(".saludo").textContent = "Buenos días " + userName;
     } else if (hours < 21) {
         document.querySelector(".saludo").textContent = "Buenas tardes " + userName;
-    } else {
+    } else  if (hours < 0) {
         document.querySelector(".saludo").textContent = "Buenas noches " + userName;
+    } else {
+        document.querySelector(".saludo").textContent = "Hora de dormir " + userName;
     }
 }
 
